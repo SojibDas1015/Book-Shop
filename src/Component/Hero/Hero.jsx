@@ -3,7 +3,7 @@ import bookImage from '../../assets/books.jpg'
 
 const Hero = () => {
     return (
-        <div className='w-10/12 mx-auto'>
+        <div className='md:w-10/12 mx-auto p-2'>
             <div className="hero bg-[#F0F0F0] rounded-2xl min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse md:px-24">
                     <img

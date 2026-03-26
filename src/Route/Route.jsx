@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router';
 import Root from '../Pages/Root/Root';
-import Hero from '../Component/Hero/Hero';
+import Main from '../Component/Main/Main';
 
 export const router = createBrowserRouter([
     {
@@ -10,7 +10,9 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: Hero
+                loader: () => fetch('booksData.json'),
+                HydrateFallback: () => <div className='text-center'>Loading...</div>,
+                Component: Main
             }
         ]
     }
