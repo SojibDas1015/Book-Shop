@@ -7,7 +7,7 @@ const Navbar = () => {
         <li><a>Pages to Read</a></li>
     </>
     return (
-        <div className='bg-base-100 shadow-sm'>
+        <div>
             <div className="flex md:w-10/12 mx-auto p-2 md:py-4">
                 <div className="navbar-start gap-4">
                     <div className="dropdown">
