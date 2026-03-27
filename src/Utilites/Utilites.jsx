@@ -11,5 +11,18 @@ const setItem = (id) => {
     getItemFormLocal.push(id)
     localStorage.setItem('wishlist', JSON.stringify(getItemFormLocal));
 }
+const getItemRead = () => {
+    const getItemFormLocal = localStorage.getItem('readlist');
+    if(getItemFormLocal){
+        return JSON.parse(getItemFormLocal);
+    }
+    return []
+}
 
-export {getItem, setItem}
+const setItemRead = (id) => {
+    const getItemFormLocal = getItemRead();
+    getItemFormLocal.push(id)
+    localStorage.setItem('readlist', JSON.stringify(getItemFormLocal));
+}
+
+export {getItem, setItem, getItemRead, setItemRead}

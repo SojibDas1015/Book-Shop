@@ -1,11 +1,14 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import Tag from '../../Component/BooksList/Tag';
-import { setItem } from '../../Utilites/Utilites';
+import { setItem, setItemRead } from '../../Utilites/Utilites';
 
 const BookDetails = () => {
     const handleOnClickWishlist = (id) => {
         setItem(id)
+    }
+    const handleOnClickReadBook = (id) => {
+        setItemRead(id)
     }
     const { id } = useParams();
     const paramId = parseInt(id);
@@ -37,7 +40,7 @@ const BookDetails = () => {
                         <p>Year of Publishing : {yearOfPublishing}</p>
                         <p>Rating : {rating}</p>
                         <div className="navbar-start gap-3 md:text-lg font-semibold">
-                            <button className="border-1 border-[#23BE0A] text-black px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer">Read</button>
+                            <button onClick={()=>handleOnClickReadBook(paramId)} className="border-1 border-[#23BE0A] text-black px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer">Read</button>
                             <button onClick={()=>handleOnClickWishlist(paramId)}  className="bg-[#59C6D2] text-white px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer">Wishlist</button>
                         </div>
                     </div>
