@@ -28,7 +28,7 @@ const ListedBooks = () => {
                 <div className="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
 
                 <input type="radio" name="my_tabs_3" className="tab" aria-label="Wishlist Books" defaultChecked />
-                <div className="tab-content bg-base-100 border-base-300 p-6">
+                <div className="tab-content bg-base-100 border-base-300 p-1 md:p-6">
                     {
                         booksLocalStorage.map((book, index) => <WishlistBooks key={index} book={book}></WishlistBooks>)
                     }
