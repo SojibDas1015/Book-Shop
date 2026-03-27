@@ -1,11 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     const Button = <>
-        <Link to='/'><li>Home</li></Link>
-        <li>Listed Books</li>
-        <li>Pages to Read</li>
+        <NavLink to='/' className={({ isActive }) => isActive ? `border-2 border-[#23BE0A] text-[#23BE0A] px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer font-bold` : ``}><li>Home</li></NavLink>
+        <NavLink to='/listebooks' className={({ isActive }) => isActive ? `border-2 border-[#23BE0A] text-[#23BE0A] px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer font-bold` : ``}><li>Listed Books</li></NavLink>
+        <NavLink to='/read' className={({ isActive }) => isActive ? `border-2 border-[#23BE0A] text-[#23BE0A] px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer font-bold` : ``}><li>Pages to Read</li></NavLink>
     </>
     return (
         <div>
@@ -25,7 +24,7 @@ const Navbar = () => {
                         <button className="btn-ghost text-xl font-bold cursor-pointer">Book Shop</button></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu-horizontal px-1 gap-6 cursor-pointer">
+                    <ul className="menu-horizontal px-1 gap-6 cursor-pointer items-center">
                         {Button}
                     </ul>
                 </div>
