@@ -4,6 +4,7 @@ import Root from '../Pages/Root/Root';
 import Main from '../Component/Main/Main';
 import BookDetails from '../Pages/BookDetails/BookDetails';
 import ListedBooks from '../Pages/ListedBooks/ListedBooks';
+import PageToRead from '../Pages/PageToRead/PageToRead';
 
 export const router = createBrowserRouter([
     {
@@ -27,7 +28,17 @@ export const router = createBrowserRouter([
                 loader: () => fetch('booksData.json'),
                 HydrateFallback: () => <div>Loading...</div>,
                 Component: ListedBooks
+            },
+            {
+                path: '/pagetoread',
+                loader: () => fetch('booksData.json'),
+                HydrateFallback: () => <div>Loading...</div>,
+                Component: PageToRead
             }
         ]
+    },
+    {
+        path: '*',
+        Component: Root
     }
 ])

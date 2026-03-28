@@ -16,7 +16,6 @@ const ListedBooks = () => {
         setBookWishlist(booksLocalStorage);
         setBookRead(booksLocalStorageRead);
     }, [Books])
-    // console.log(bookRead)
     const handleSort = (sortType) => {
         if (sortType === 'rating') {
             const sortWishlist = [...bookWishlist].sort((a, b) => a.rating - b.rating)

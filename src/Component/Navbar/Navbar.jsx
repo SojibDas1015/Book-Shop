@@ -4,7 +4,7 @@ const Navbar = () => {
     const Button = <>
         <NavLink to='/' className={({ isActive }) => isActive ? `border-2 border-[#23BE0A] text-[#23BE0A] px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer font-bold` : ``}><li>Home</li></NavLink>
         <NavLink to='/listebooks' className={({ isActive }) => isActive ? `border-2 border-[#23BE0A] text-[#23BE0A] px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer font-bold` : ``}><li>Listed Books</li></NavLink>
-        <NavLink to='/read' className={({ isActive }) => isActive ? `border-2 border-[#23BE0A] text-[#23BE0A] px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer font-bold` : ``}><li>Pages to Read</li></NavLink>
+        <NavLink to='/pagetoread' className={({ isActive }) => isActive ? `border-2 border-[#23BE0A] text-[#23BE0A] px-2 py-0.5 lg:px-5 lg:py-2 rounded-lg cursor-pointer font-bold` : ``}><li>Pages to Read</li></NavLink>
     </>
     return (
         <div>
